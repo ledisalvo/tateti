@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-x: #3b82f6;       /* electric blue for X */
-  --color-o: #f97316;       /* orange for O */
-  --color-x-light: #dbeafe;
-  --color-o-light: #ffedd5;
-  --color-win-line: #22c55e;
+  --color-x: #22c55e;       /* green for X */
+  --color-o: #ef4444;       /* red for O */
+  --color-x-light: #dcfce7;
+  --color-o-light: #fee2e2;
+  --color-win-line: #fbbf24;
+  --color-wood-dark: #6e2508;
+  --color-wood-medium: #9b3d12;
+  --color-wood-cell: #c07030;
+  --color-wood-border: #e8a040;
+  --color-wood-panel: #d4894a;
 }
 
 * {
@@ -15,8 +20,17 @@
 body {
   margin: 0;
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  background: #0f0f1a;
-  color: #f1f5f9;
+  background:
+    repeating-linear-gradient(
+      92deg,
+      rgba(0,0,0,0) 0px, rgba(0,0,0,0.03) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 8px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      rgba(255,255,255,0) 0px, rgba(255,255,255,0.04) 1px, rgba(255,255,255,0) 2px, rgba(255,255,255,0) 12px
+    ),
+    linear-gradient(160deg, #7a2a0a 0%, #9b3d12 25%, #7a2a0a 50%, #8b3510 75%, #6e2508 100%);
+  color: #fff;
   min-height: 100svh;
 }
 
